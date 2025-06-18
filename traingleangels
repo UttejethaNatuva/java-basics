@@ -1,0 +1,55 @@
+This Java program classifies a triangle based on the measures of its three angles. 
+It takes three integer inputs representing the angles, calculates their sum, and then checks several conditions to determine the triangle type. 
+It identifies equilateral, acute, right, obtuse, or invalid triangles based on standard geometric rules. 
+
+package java12;
+import java.util.*;
+public class Angles {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+		int sum = a+b+c;
+		if((a==0 || b==0 || c==0) || sum != 180) {
+			System.out.println("Not a triangle");
+		}
+		else if(a==60 && b==60 && c==60) {
+			System.out.println("Equilateral triangle");
+		}
+		else if(a<90 && b<90 && c<90) {
+			System.out.println("Acute angel triangle");
+		}
+		else if(a==90 || b==90 || c==90) {
+			System.out.println("Right angel Triangle");
+		}
+		else {
+			System.out.println("Obtuse angel Triangle");
+		}
+		
+
+	}
+
+}
+
+
+
+
+Detailed Explanation:
+The program Angles.java is designed to analyze the types of triangles based on the given angles. 
+1. Import Scanner:
+import java.util.Scanner; imports the Scanner class, which is used to read user input from the console.
+2. Create Scanner Object:
+Scanner sc = new Scanner(System.in); creates a Scanner object named sc that reads input from the standard input stream (System.in), typically the keyboard.
+3. Read Angle Values:
+The program prompts the user to enter three integer values representing the angles of a triangle. These values are stored in the integer variables a, b, and c using sc.nextInt().
+4. Calculate Sum:
+int sum = a + b + c; calculates the sum of the three angles.
+5. Triangle Validity Check:
+if ((a == 0 || b == 0 || c == 0) || sum != 180): This condition checks if any angle is zero or if the sum of the angles is not equal to 180 degrees. If either of these conditions is true, it indicates an invalid triangle, and the program outputs "Not a triangle".
+6. Triangle Type Classification:
+else if (a == 60 && b == 60 && c == 60): This condition checks if all three angles are equal to 60 degrees. If so, it's an equilateral triangle, and the program outputs "Equilateral triangle".
+else if (a < 90 && b < 90 && c < 90): This condition checks if all three angles are less than 90 degrees (acute angles). If true, it's an acute-angled triangle, and the program outputs "Acute angel triangle".
+else if (a == 90 || b == 90 || c == 90): This condition checks if any of the angles is equal to 90 degrees (right angle). If true, it's a right-angled triangle, and the program outputs "Right angel Triangle".
+else: If none of the above conditions are met, it implies that at least one angle is greater than 90 degrees (obtuse angle), making it an obtuse-angled triangle. The program outputs "Obtuse angel Triangle"
