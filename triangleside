@@ -1,3 +1,8 @@
+This Java program determines the type of triangle (Equilateral, Isosceles, or Scalene) based on the lengths of its three sides. 
+It takes three integer inputs from the user, representing the side lengths, and then uses conditional statements to classify the triangle. 
+
+
+
 package java12;
 
 import java.util.Scanner;
