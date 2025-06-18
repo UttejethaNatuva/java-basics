@@ -1,0 +1,37 @@
+This Java program is designed to determine whether a given year is a leap year or not, based on the rules of the Gregorian calendar system.
+
+A leap year is a year that is divisible by 4 but not divisible by 100, unless it is also divisible by 400. 
+This logic is crucial in keeping our calendar in alignment with the Earth's revolutions around the Sun, adding an extra day to the month of February every four years.
+
+
+
+import java.util.*;
+public class Leapyear {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int year = sc.nextInt();
+		if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+			System.out.println("Leap year");
+		}
+		else {
+			System.out.println("not leap year");
+		}
+ 
+	}
+}
+
+
+
+The program begins by importing the java.util.* package, which provides access to the Scanner class for user input.
+
+It then prompts the user to input a year (as an integer).
+
+The input is checked using conditional statements:
+
+If the year is divisible by 4 and not divisible by 100, or if it is divisible by 400, it is classified as a leap year.
+
+Otherwise, it is considered not a leap year.
+
+The result is printed to the console accordingly.
