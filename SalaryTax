@@ -1,0 +1,51 @@
+This Java program demonstrates a simple income tax calculation based on a user's annual salary input. 
+It uses conditional branching to determine the tax slab applicable to the salary amount and calculates the tax accordingly. 
+This program is beginner-friendly and is helpful for understanding:
+
+Basic Java syntax
+
+User input handling using Scanner
+
+Conditional statements (if, else if, else)
+
+Arithmetic operations
+import java.util.*;
+public class Salary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		long s = sc.nextLong();
+		if(s<500000) {
+			System.out.println("No tax");
+		}
+		else if(s>500000 || s<1000000){
+			System.out.println("Tax is 10%");
+			System.out.println("Your tax amount is "+ (s*10)/100);
+		}
+		else {
+			System.out.println("Your tax is 20%");
+			System.out.println("Your tax amount is "+ (s*20)/100);
+		}
+
+	}
+
+
+📌 Features
+Accepts user input for the annual salary (long type).
+
+Determines tax category based on salary:
+
+💰 No tax for salaries below ₹5,00,000
+
+💸 10% tax for salaries between ₹5,00,001 and ₹10,00,000
+
+💸 20% tax for salaries above ₹10,00,000
+
+Outputs:
+
+Applicable tax rate
+
+Actual tax amount to be paid
+
+}
