@@ -1,0 +1,45 @@
+import java.util.*;
+public class Shopping {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("weight (kg): ");
+        double weight = scanner.nextDouble();
+        scanner.nextLine(); 
+
+        System.out.print("Enter destination zone (Local/National/International): ");
+        String zone = scanner.nextLine().toLowerCase();
+
+        System.out.print("Enter shipping speed (Standard/Express/Overnight): ");
+        String speed = scanner.nextLine().toLowerCase();
+
+        System.out.print("Enter membership level (Regular/Premium/VIP): ");
+        String membership = scanner.nextLine().toLowerCase();
+        double br = 0;
+        switch (zone) {
+            case "local": br = 10; 
+            break;
+            case "national": br = 20; break;
+            case "international": br = 50; break;
+            default: System.out.println("Invalid destination zone"); return;
+        }
+        double sm= 1.0;
+        switch (speed) {
+            case "standard": sm = 1.0; break;
+            case "express": sm = 1.5; break;
+            case "overnight": sm = 2.5; break;
+            default: System.out.println("Invalid shipping speed"); return;
+        }
+        double d = 0;
+        switch (membership) {
+            case "regular": d = 0; break;
+            case "premium": d = 0.10; break;
+            case "vip": d = 0.20; break;
+            default: System.out.println("Invalid membership level"); return;
+        }
+        double cost = weight * br * sm;
+        double discountCost = cost * (1 - d);
+
+        System.out.printf("Total shipping cost: ₹%.2f%n", discountCost);
+    }
+}
