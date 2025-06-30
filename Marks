@@ -1,0 +1,45 @@
+Java program to find Total marks, average and Grade of a student
+
+package java12;
+import java.util.*;
+public class Marks {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int total = 600;
+		int M1 = sc.nextInt();
+		int M2 = sc.nextInt();
+		int M3 = sc.nextInt();
+		int M4 = sc.nextInt();
+		int M5 = sc.nextInt();
+		int M6 = sc.nextInt();
+		int Marks = M1+M2+M3+M4+M5+M6;
+		int p = (Marks / total) *100;
+		if(p>80) {
+			System.out.println("A");
+		}
+		else if(p>70 && p<80) {
+			System.out.println("B");
+		}
+		else if(p<70 && p>40) {
+			System.out.println("C");
+		}
+		else if(p<40) {
+			System.out.println("F");
+		}
+
+	}
+}
+
+Output:
+
+100
+100
+100
+100
+100
+100
+A
+
+
